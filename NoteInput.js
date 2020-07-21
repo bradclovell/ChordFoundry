@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import Picker, { WheelPicker } from 'react-native-wheel-picker-android'
+//import Picker, { WheelPicker } from 'react-native-wheel-picker-android'
 
 import {
   StyleSheet,
@@ -9,7 +9,7 @@ import {
   Image,
   StatusBar,
   Dimensions,
-  //Picker
+  Picker
 } from 'react-native';
 
 const COLORS = require('./color_palette.json')
@@ -31,17 +31,17 @@ export default class NoteInput extends Component {
 
   
 
-  // Android Version...
+  /*/ Android Version... 
   render(){
     return(
       <WheelPicker selectedItem={this.props.selectedItem} />
     )
-  }
+  }*/
 
 
 
 
-  /* iOS Version...
+  // iOS Version...
   render(){
 
     return (
@@ -66,7 +66,7 @@ export default class NoteInput extends Component {
         
       </Picker>
     )
-  }*/
+  }
 
 
 }
