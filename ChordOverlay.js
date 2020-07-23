@@ -44,7 +44,8 @@ export default class ChordOverlay extends Component {
       onLongPress={() => this.props.disableOverlay()}
       underlayColor={"#0008"}
       activeOpacity={1}>
-        <View style={{ position: "relative", justifyContent: "center", alignItems: "center", height: (SCREEN_HEIGHT * .6), width: (SCREEN_WIDTH * .9), backgroundColor: COLORS["hot_red"], flexDirection: "column" }}>
+        <View style={{ position: "relative", justifyContent: "center", alignItems: "center",
+        height: (SCREEN_HEIGHT * .6), width: (SCREEN_WIDTH * .9), backgroundColor: COLORS["hot_red"], flexDirection: "column" }}>
 
           <View style={{flex: 1, width: "100%", flexDirection: "row", justifyContent: "center", alignItems: "center"}}>
             <View flex={.1}></View>

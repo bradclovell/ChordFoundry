@@ -1,6 +1,9 @@
 
 export default sounds = {}
 
+sounds["minNote"] = 24;
+sounds["maxNote"] = 72;
+
 sounds["C_2"] = require("./Notes/C_2.wav");
 sounds["C#_2"] = require("./Notes/Cs_2.wav");
 sounds["D_2"] = require("./Notes/D_2.wav");

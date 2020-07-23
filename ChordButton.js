@@ -15,6 +15,7 @@ const SCREEN_WIDTH = Dimensions.get("window").width;
 
 const CHORDS = require('./chord_vectors.json')
 const COLORS = require('./color_palette.json')
+const MEASUREMENTS = require('./measurements.js')
 
 export default class ChordOverlay extends Component {
 
@@ -28,11 +29,12 @@ export default class ChordOverlay extends Component {
     return(
       <View style={{flex: 1, flexDirection: "column"}}>
         <View flex={.3}></View>
-        <TouchableOpacity style={{backgroundColor: COLORS["dark_red"], flex: 1, //height: 50,
-        alignItems: "center", justifyContent: "center", borderWidth: 1, margin: 0, borderRadius: 3}}
+        <TouchableOpacity style={{backgroundColor: COLORS["dark_red"], flex: 1,
+          alignItems: "center", justifyContent: "center",
+          borderWidth: MEASUREMENTS.getMediumHairlineWidth(), margin: 0, borderRadius: MEASUREMENTS.getMediumBorderRadius()}}
         onPress={() => this.props.setChord(this.props.chordCode)}>
 
-          <Text style={{color: COLORS["ash_gray"]}}>{this.props.chordDisplay}</Text>
+          <Text style={{color: COLORS.ash_gray, fontSize: MEASUREMENTS.getMediumFontSize()}}>{this.props.chordDisplay}</Text>
           
         </TouchableOpacity>
         <View flex={.4}></View>

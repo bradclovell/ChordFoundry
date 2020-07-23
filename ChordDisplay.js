@@ -44,7 +44,7 @@ export default class ChordDisplay extends Component {
     return (
       <View>
 
-        <GLView style={{ width: screenWidth, height: screenHeight/3 , borderBottomWidth: 1 }}
+        <GLView style={{ width: screenWidth, height: screenHeight/3 }}
           onContextCreate={this._onContextCreate}>
         </GLView>
 
@@ -207,9 +207,9 @@ export default class ChordDisplay extends Component {
 
     
 
-    this.drawRect(0,0,.5,.5, [1,1,0,1]);
+    //this.drawRect(0,0,.5,.5, [1,1,0,1]);
     
-    this.drawRect(0,0,.2,.2, [1,0,0,1]);
+    //this.drawRect(0,0,.2,.2, [1,0,0,1]);
 
     if (this.props.frettings.length <= 0){
       frettingToDraw = null;

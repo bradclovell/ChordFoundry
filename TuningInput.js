@@ -33,7 +33,7 @@ export default class TuningInput extends Component {
     });
 
     return(
-      <View style={{flexDirection: "row", borderBottomWidth: 1}}>
+      <View style={{flexDirection: "row"}}>
         {inputArray}
       </View>
     )

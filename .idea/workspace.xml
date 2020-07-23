@@ -7,6 +7,9 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1d0lFkGcku5bwEGfrNG6kPnkBbJ" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -32,13 +35,13 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="360" y="120" width="1200" height="800" key="com.android.tools.idea.avdmanager.AvdListDialog" timestamp="1593371814599">
+    <state x="360" y="120" width="1200" height="800" key="com.android.tools.idea.avdmanager.AvdListDialog" timestamp="1595492353409">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="360" y="120" width="1200" height="800" key="com.android.tools.idea.avdmanager.AvdListDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1593371814599" />
-    <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1593371789363">
+    <state x="360" y="120" width="1200" height="800" key="com.android.tools.idea.avdmanager.AvdListDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1595492353409" />
+    <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1595492336097">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="656" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1593371789363" />
+    <state x="656" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1595492336097" />
   </component>
 </project>

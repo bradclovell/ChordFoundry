@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 
-//import Picker, { WheelPicker } from 'react-native-wheel-picker-android'
-
 import {
   StyleSheet,
   Text,
@@ -13,6 +11,7 @@ import {
 } from 'react-native';
 
 const COLORS = require('./color_palette.json')
+const MEASUREMENTS = require('./measurements.js')
 
 const FLAT = '\u266D'
 const SHARP= '\u266F'
@@ -29,26 +28,14 @@ export default class NoteInput extends Component {
   }
 
 
-  
 
-  /*/ Android Version... 
-  render(){
-    return(
-      <WheelPicker selectedItem={this.props.selectedItem} />
-    )
-  }*/
-
-
-
-
-  // iOS Version...
   render(){
 
     return (
       <Picker
         selectedValue={this.props.note}
         style={{ flex: 1 }}
-        itemStyle={{ color: COLORS.ash_gray, backgroundColor: COLORS.dark_red, height: 70, fontSize: 13 }}
+        itemStyle={{ color: COLORS.ash_gray, backgroundColor: COLORS.dark_red, height: MEASUREMENTS.getMediumBlockHeight(), fontSize: MEASUREMENTS.getMediumFontSize() }}
         onValueChange={(itemValue, itemIndex) => {this.setNote(itemValue)} }>
 
         <Picker.Item label="C"                       value={ 0} />

@@ -14,8 +14,7 @@ import {
 
 
 const COLORS = require('./color_palette.json')
-
-const buttonHeight = 50;
+const MEASUREMENTS = require('./measurements.js')
 
 export default class NoteInput extends Component {
 
@@ -34,15 +33,15 @@ export default class NoteInput extends Component {
   render(){
 
     return(
-      <TouchableOpacity style={{backgroundColor: this.props.chordVector[this.props.index] == true ? COLORS.hot_red : COLORS.middle_gray, flex: 1, height: buttonHeight, position: "relative",
-        alignItems: "center", justifyContent: "center", borderWidth: 1, margin: 0, borderRadius: 3}}
-
-        onPress={() => this.toggleButton()}
-        onLongPress={() => this.props.activateOverlay()}>
-
+      <TouchableOpacity style={{backgroundColor: this.props.chordVector[this.props.index] == true ? COLORS.hot_red : COLORS.middle_gray,
+        flex: 1, height: MEASUREMENTS.getSmallBlockHeight(), position: "relative",
+        alignItems: "center", justifyContent: "center", borderWidth: 0, margin: 0, borderRadius: MEASUREMENTS.getSmallBorderRadius()}}
+      onPress={() => this.toggleButton()}
+      onLongPress={() => this.props.activateOverlay()}>
         
-        <Text style={{color: COLORS.obsidian_black}}>{this.props.toneName}</Text>
-        <Text style={{color: COLORS.obsidian_black}}>{this.props.index}</Text>
+        <Text style={{color: COLORS.obsidian_black, fontSize: MEASUREMENTS.getMediumFontSize()}}>{this.props.toneName}</Text>
+        <Text style={{color: COLORS.obsidian_black, fontSize: MEASUREMENTS.getMediumFontSize()}}>{this.props.index}</Text>
+        
       </TouchableOpacity>
     )
   }

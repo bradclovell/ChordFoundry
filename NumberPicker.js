@@ -11,6 +11,7 @@ import {
 } from 'react-native';
 
 const COLORS = require('./color_palette.json')
+const MEASUREMENTS = require('./measurements.js')
 
 export default class NoteInput extends Component {
 
@@ -32,8 +33,9 @@ export default class NoteInput extends Component {
     return(
       <Picker
         selectedValue={this.props.value}
-        style={{ flex: 1, borderTopWidth: 1, borderBottomWidth: 1 }}
-        itemStyle={{ color: COLORS.obsidian_black, backgroundColor: COLORS.hot_red, height: 68, fontSize: 13 }} // This is 68 to compensate for top/bottom border width
+        style={{ flex: 1 }}
+        itemStyle={{ color: COLORS.obsidian_black, backgroundColor: COLORS.hot_red,
+          height: MEASUREMENTS.getMediumBlockHeight(), fontSize: MEASUREMENTS.getMediumFontSize() }}
         onValueChange={(itemValue, itemIndex) => {this.props.updateNumber(itemValue)} }>
 
         {pickerItems}

@@ -43,6 +43,7 @@ function getValidFrets(rootNote,toneVector,tuning,highestFret){
 function getBlankOptionsObject(){
   return {
     startsWithRoot: false,
+    lowestIsRoot: false,
     numSkippableStrings: 0,
   };
 }
@@ -302,6 +303,24 @@ function isChord(rootNote, absoluteVector, tuning, fretting, optionsObject){
 
   if (optionsObject.startsWithRoot && firstNote != rootNote){return false;}
 
+
+  // Return false if the lowest string is not the root IF lowestIsRoot option is enabled.
+  let lowestNote = null; // Lowest note sounded by the Midi
+  for (let i = 0; i < fretting.length; i++){
+    if (fretting[i] == null){ continue; }
+
+    // NB: this will get the midi number of the note
+    let thisNote = tuning[i] + fretting[i];
+    
+    if (lowestNote == null){lowestNote = thisNote; continue;}
+
+    lowestNote = Math.min(lowestNote, thisNote);
+  }
+  if (optionsObject.lowestIsRoot && (lowestNote % 12) != rootNote){
+    return false;
+  }
+
+  // Fretting is not filtered out, so return true.
   return true;
 }
 

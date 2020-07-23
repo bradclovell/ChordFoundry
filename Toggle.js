@@ -13,8 +13,7 @@ import {
 } from 'react-native';
 
 const COLORS = require('./color_palette.json')
-
-const buttonHeight = 70;
+const MEASUREMENTS = require('./measurements.js')
 
 export default class NoteInput extends Component {
 
@@ -28,14 +27,13 @@ export default class NoteInput extends Component {
   render(){
 
     return(
-      <TouchableOpacity style={{backgroundColor: this.props.isEnabled == true ? COLORS.hot_red : COLORS.middle_gray, flex: 1, height: buttonHeight, position: "relative",
-        alignItems: "center", justifyContent: "center", borderWidth: 1, margin: 0, borderRadius: 3}}
-
-        onPress={() => this.props.onPress()}
-        onLongPress={() => this.props.onLongPress()}>
+      <TouchableOpacity style={{backgroundColor: this.props.isEnabled == true ? COLORS.hot_red : COLORS.middle_gray, flex: 1, height: MEASUREMENTS.getMediumBlockHeight(),
+        position: "relative", alignItems: "center", justifyContent: "center" }}
+      onPress={() => this.props.onPress()}
+      onLongPress={() => this.props.onLongPress()}>
 
         
-        <Text numberOfLines={5} style={{textAlign: "center", color: COLORS.obsidian_black}}>{this.props.text}</Text>
+        <Text numberOfLines={5} style={{textAlign: "center", color: COLORS.obsidian_black, fontSize: MEASUREMENTS.getMediumFontSize()}}>{this.props.text}</Text>
       </TouchableOpacity>
     )
   }

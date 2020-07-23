@@ -12,6 +12,7 @@ import {
 } from 'react-native';
 
 const COLORS = require('./color_palette.json')
+const MEASUREMENTS = require('./measurements.js')
 
 const FLAT = '\u266D'
 const SHARP= '\u266F'
@@ -89,14 +90,14 @@ export default class AbsoluteToneInput extends Component {
       }
     }
 
-    
+    pickerItems.push(<Picker.Item label={"C6"} value={6*12+0} key={0} />) // Last leftover C6 note.
 
 
     return (
       <Picker
         selectedValue={this.props.note}
         style={{ flex: 1 }}
-        itemStyle={{ color: COLORS.obsidian_black, backgroundColor: COLORS.middle_gray, height: 70, fontSize: 13 }}
+        itemStyle={{ color: COLORS.obsidian_black, backgroundColor: COLORS.middle_gray, height: MEASUREMENTS.getMediumBlockHeight(), fontSize: MEASUREMENTS.getMediumFontSize()}}
         onValueChange={(itemValue, itemIndex) => {this.setNote(itemValue)} }>
 
         {pickerItems}
