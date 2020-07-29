@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "ChordFoundryTest",
+    "name": "Chord Foundry",
     "icon": "./assets/icon.png",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#141414"
     },
     "version": "1.0.0",
     "orientation": "portrait",
@@ -14,6 +14,10 @@
       "package": "com.subcreation.chordfoundry",
       "versionCode": 1
     },
-    "description": ""
+    "ios": {
+      "bundleIdentifier": "com.subcreation.chordfoundry",
+      "supportsTablet": true
+    },
+    "description": "Universal chord finder for all fretted instruments."
   }
 }

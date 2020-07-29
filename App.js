@@ -14,7 +14,6 @@ import {
   SafeAreaView,
   TouchableOpacity
 } from 'react-native';
-import Canvas from 'react-native-canvas';
 import { Audio } from 'expo-av';
 
 
